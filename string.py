@@ -26,3 +26,19 @@ for ch in string:
         result += ch
 
 print(result)
+
+#Replace characters at even indexes with characters from a list (repeating list if needed).
+string = "abcdefghij"
+replace_list = ['X', 'Y']
+
+result = ""
+list_index = 0   
+
+for i in range(len(string)):
+    if i % 2 == 0:  
+        result += replace_list[list_index]
+        list_index = (list_index + 1) % len(replace_list)  
+    else:
+        result += string[i]
+
+print(result)
